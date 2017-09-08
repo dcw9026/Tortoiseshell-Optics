@@ -66,3 +66,30 @@ nav ul li {
   line-height: 1.2;
   font-weight: bold;
 }
+
+/* Business Info Section Styles */
+
+#icons-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.icon {
+  margin: 0 6rem;
+  max-height: 8rem;
+  flex-basis: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#business-info {
+  margin-top: 3rem;
+}
