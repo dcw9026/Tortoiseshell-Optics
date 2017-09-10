@@ -2,7 +2,9 @@ html, body {
   font-size: 18px;
   font-family: Helvetica, sans-serif;
   line-height: 1.4;
+  width: 100%;
 }
+
 
 /* Container */
 
@@ -10,6 +12,7 @@ html, body {
   max-width: 960px;
   margin: 0 auto;
 }
+
 
 /* Header */
 
@@ -55,6 +58,13 @@ nav ul li {
   margin-left: 2rem;
 }
 
+
+/* Visible only on smaller devices such as Smartphones */
+
+#small-screen-nav {
+  display: none;
+}
+
 #catchphrase {
   float: right;
   margin-top: 10rem;
@@ -66,6 +76,7 @@ nav ul li {
   line-height: 1.2;
   font-weight: bold;
 }
+
 
 /* Business Info Section Styles */
 
@@ -111,6 +122,7 @@ nav ul li {
   max-width: 10rem;
 }
 
+
 /* Footer Styles */
 
 footer {
@@ -129,4 +141,106 @@ footer p {
 #copyright {
   display: flex;
   align-items: center;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+  header {
+    background-position: center left;
+  }
+  #nav-bar {
+    position: relative;
+    top: 0rem;
+  }
+  #catchphrase {
+    font-size: 1.33rem;
+    font-weight: bold;
+    margin-top: 18rem;
+    margin-right: 2rem;
+    padding: 1.5rem 6rem;
+  }
+  #icons-section {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    margin: auto;
+  }
+  footer {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  header {
+    max-height: 17rem;
+    background-position: 20% 20%;
+  }
+  #branding h1 {
+    display: none;
+  }
+  #branding img {
+    max-width: 50%;
+  }
+  #nav-bar nav {
+    display: none;
+  }
+  #small-screen-nav {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  #catchphrase {
+    font-size: 1rem;
+    text-align: center;
+    margin: 9rem 0 0 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  #icons-section {
+    display: flex;
+    flex-direction: column;
+    margin: 3.77rem 0;
+  }
+  .icon {
+    margin-top: 1.54rem;
+    font-size: 0.77rem;
+  }
+  .icon img {
+    max-width: 75%;
+    max-height: 75%;
+  }
+  #business-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .info {
+    max-width: 100%;
+    margin-right: 0%;
+    font-size: 0.77rem;
+  }
+  .info p {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+  .info h3 {
+    max-width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  footer p {
+    display: none;
+  }
+  footer img {
+    max-width: 40%;
+  }
 }
